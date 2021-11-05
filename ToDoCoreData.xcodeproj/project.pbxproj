@@ -95,8 +95,8 @@
 		7BC353B12729CF0E00025934 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7BC353AF2729CF0000025934 /* AddTaskViewController.swift */,
 				7BC353952729B28300025934 /* ViewController.swift */,
+				7BC353AF2729CF0000025934 /* AddTaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

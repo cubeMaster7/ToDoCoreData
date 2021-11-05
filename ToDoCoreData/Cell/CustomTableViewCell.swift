@@ -33,7 +33,6 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     func configure(model: ToDoList) {
-        
         switch model.priority {
         case 1:
             label.text = "❗️\(model.title!)"

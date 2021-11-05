@@ -51,8 +51,6 @@ class ViewController: UIViewController {
             addBarButton.isEnabled = false
         }
     }
-    
-
 }
 
 extension ViewController: UITableViewDelegate {
@@ -75,9 +73,7 @@ extension ViewController: UITableViewDelegate {
             }
         }
     }
-    
 
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editTask" {
             let indexPath = tableView.indexPathForSelectedRow!
@@ -86,22 +82,11 @@ extension ViewController: UITableViewDelegate {
         }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "editTask", sender: self)
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "editTask"{
-//            let indexPath = tableView.indexPathForSelectedRow!
-//            let detailVC = segue.destination as? AddTaskViewController
-//            detailVC?.selectedIndex = todos[indexPath.row]
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let todo = todos[sourceIndexPath.row]
         todos.remove(at: sourceIndexPath.row)
         todos.insert(todo, at: destinationIndexPath.row)
+        
     }
     
 }
@@ -127,9 +112,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: PressReadyTaskButtonProtocols {
     func readyButtonTapped(indexPath: IndexPath) {
         let todo = todos[indexPath.row]
-    
         updateReadyButtonTaskModel(task: todo, bool: !todo.isCompleted)
-        
         tableView.reloadData()
     }
     
@@ -141,5 +124,4 @@ extension ViewController: PressReadyTaskButtonProtocols {
             print(error.localizedDescription)
         }
     }
-    
 }

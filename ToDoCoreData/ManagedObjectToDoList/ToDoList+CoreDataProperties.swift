@@ -20,7 +20,7 @@ extension ToDoList {
     @NSManaged public var title: String?
     @NSManaged public var isCompleted: Bool
     @NSManaged public var priority: Int32
-    
+    @NSManaged public var orderID: Int32
 
 }
 
