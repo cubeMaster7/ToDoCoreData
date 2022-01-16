@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         getData()
+        view.backgroundColor = .red
     }
     
     override func viewDidLoad() {
